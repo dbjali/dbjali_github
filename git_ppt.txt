@@ -62,8 +62,10 @@ HEAD 파일, index 파일, objects 디렉토리, refs 디렉토리가 남았다.
 
 12. git add . : 모든 파일을 tracking
 
+
+13. mac인경우 이메일과 아이디를 등록하는 작업을 해야 아래 명령이 error가 발생하지 않는다.
 13. git commit -m "message" : 나나 팀원들에게
 
-14. git push origin +master :
+14. git push origin +master : 아이디와 비번이 뜰수 있다.
 
 
