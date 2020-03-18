@@ -1,0 +1,69 @@
+1. git --version   :  설치 확인
+2. 없으면 설치 : mac 방법 2가지.  
+	1. https://git-scm.com에서 dmg 파일받아 열면 .pkg 파일을 실행하고 재부팅
+	2. brew install git
+2-2. for windows
+	1. https://gitforwindows.org
+
+3. mkdir git : 홈 디렉토리에서 만들자
+4. cd git
+5. git init  : 명령을 입력하면 .git 디렉터리 생성된다. : git Repository를 구성하는 뼈대 위한 설정파일 생성
+
+/////////////////////////////
+  .git   :   디렉터리 구조
+	-----------------------
+	config
+	description
+	HEAD
+	hooks/
+	info/
+	objects/
+	refs/
+	-----------------------
+
+이 외에 다른 파일들이 더 있지만,
+ 이 상태가 git init 명령을 실행한 직후에 보이는 새 저장소의 모습이다. 
+ 	- description 파일은 기본적으로 GitWeb 프로그램에서만 사용하기 때문에 이 파일은 신경쓰지 않아도 된다. 
+	- config 파일에는 해당 프로젝트에만 적용되는 설정 옵션이 들어 있다. 
+	- info 디렉토리는 .gitignore 파일처럼 무시할 파일의 패턴을 적어 두는 곳이다. 
+		하지만 .gitignore 파일과는 달리 Git으로 관리되지 않는다. 
+	- hooks 디렉토리에는 클라이언트 훅이나 서버 훅이 위치한다. 관련 내용은 Git Hooks 에서 설명한다.
+
+다음 항목이 Git의 핵심이다. 
+HEAD 파일, index 파일, objects 디렉토리, refs 디렉토리가 남았다. 
+
+	- objects 디렉토리는 모든 컨텐트를 저장하는 데이터베이스이고 
+	- refs 디렉토리에는 커밋 개체의 포인터(브랜치, 태그, 리모트 등)를 저장한다. 
+	- HEAD 파일은 현재 Checkout 한 브랜치를 가리키고 
+	- index 파일은 Staging Area의 정보를 저장한다. 각 절마다 주제를 나눠서 Git이 어떻게 동작하는지 자세히 설명한다
+
+
+
+6. https://github.com/   :   회원가입과 로그인하기
+
+7. Repository : 나만의 공간을 생성하는 
+	- public : 모든유저가 업로드만 제한
+	- private : 열람과 업로드 제한
+
+8. git remote add origin 레포지토리 어드레스
+	- 아무것도 안뜨면 정상이다.
+	- 문제 발생시 : git remote rm origin
+	- git config --global user.name "angelkim88" //이름
+
+	- git config --global user.email "깃허브 메일주소"
+
+9. push : 올리고
+   pull : 가져온다.
+   중요한것은 push 전 pull 한다.
+
+10. git pull origin master : repository에거 끌어오기
+
+11. git status : 로컬과 깃과의 상태
+
+12. git add . : 모든 파일을 tracking
+
+13. git commit -m "message" : 나나 팀원들에게
+
+14. git push origin +master :
+
+
